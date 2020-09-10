@@ -43,7 +43,10 @@ if ($items = $block->getProductCollection()) : ?>
                         <div class="slider-product-item-info">
                             <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
                                class="product photo slider-product-item-photo">
-                                <?=  $block->getImage($_item, 'recently_viewed_products_grid_content_widget')->toHtml(); ?>
+                                <?php
+                                        // this breaks search service
+                                        //$block->getImage($_item, 'recently_viewed_products_grid_content_widget')->toHtml(); 
+                                ?>
                             </a>
                             <div class="product details slider-product-item-details">
                                 <strong class="product name product-item-name">
